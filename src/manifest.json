@@ -1,0 +1,27 @@
+{
+    "name": "WebGPU Shader Editor",
+    "manifest_version": 2,
+    "version": "0.1",
+    "minimum_chrome_version": "10.0",
+    "devtools_page": "devtools.html",
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["content_script.js"],
+            "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources": [
+        "injected_script.js"
+    ],
+    "permissions": [
+        "tabs",
+        "http://*/*",
+        "https://*/*"
+    ]
+}

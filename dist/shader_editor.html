@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                padding: 0;
+                margin: 0;
+                color: #eee;
+            }
+
+            .container {
+                width: 100%;
+                padding-right: 15px;
+                padding-left: 15px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+            .row {
+                display: flex;
+                margin-left: -15px;
+                margin-right: -15px;
+            }
+
+            .side-panel {
+                position: relative;
+                flex-basis: 0;
+                flex-grow: 1;
+                width: 33%;
+                max-width: 100px;
+                height: 100vh;
+                background-color: #333;
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+
+            .main-panel {
+                position: relative;
+                flex-basis: 0;
+                flex-grow: 1;
+                width: 66%;
+                height: 100vh;
+                background-color: #222;
+                padding-right: 15px;
+                padding-left: 15px;
+                overflow: scroll;
+            }
+
+            #shader-editor {
+                width: 100%;
+                height: 100%;
+                padding: 5px;
+                background-color: #333;
+                color: #eee;
+            }
+
+            #shader-list a {
+                color: #eee;
+                text-decoration: none;
+            }
+        </style>
+        <script src="shader_editor.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="side-panel">
+                    <table id="shader-list">
+                        <tr><th>Shaders</th></tr>
+                    </table>
+                </div>
+                <div class="main-panel">
+                    Select a shader in the sidebar to inspect the contents.
+                    <textarea id="shader-editor"></textarea>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

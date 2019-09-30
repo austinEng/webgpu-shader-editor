@@ -1,0 +1,16 @@
+{
+    "name": "webgpu-shader-editor",
+    "version": "0.0.1",
+    "scripts": {
+        "build": "webpack",
+        "start": "webpack --watch"
+    },
+    "dependencies": {
+        "webgpu-shader-compiler-loader": "austinEng/webgpu-shader-compiler-loader#8e7c20d"
+    },
+    "devDependencies": {
+        "copy-webpack-plugin": "^5.0.4",
+        "webpack": "^4.41.0",
+        "webpack-cli": "^3.3.9"
+    }
+}
