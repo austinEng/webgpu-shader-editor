@@ -171,10 +171,10 @@ export default function Client(fn) {
             return undefined;
         }
         if (!descriptor.attributeSet) {
-            throw new Exception('Missing attributeSet');
+            throw new Error('Missing attributeSet');
         }
         if (typeof descriptor.attributeSet[Symbol.iterator] !== 'function') {
-            throw new Exception('attributeSet is not iterable');
+            throw new Error('attributeSet is not iterable');
         }
         return {
             stride: descriptor.stride,
@@ -188,7 +188,7 @@ export default function Client(fn) {
             return undefined;
         }
         if (descriptor.vertexBuffers && typeof descriptor.vertexBuffers[Symbol.iterator] !== 'function') {
-            throw new Exception('vertexBuffers is not iterable');
+            throw new Error('vertexBuffers is not iterable');
         }
         return {
             indexFormat: descriptor.indexFormat,
@@ -201,10 +201,10 @@ export default function Client(fn) {
             return undefined;
         }
         if (!descriptor.colorStates) {
-            throw new Exception('Missing colorStates');
+            throw new Error('Missing colorStates');
         }
         if (typeof descriptor.colorStates[Symbol.iterator] !== 'function') {
-            throw new Exception('colorStates is not iterable');
+            throw new Error('colorStates is not iterable');
         }
         return {
             layout: descriptor.layout,
